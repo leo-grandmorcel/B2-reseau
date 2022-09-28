@@ -61,7 +61,7 @@ Carte réseau sans fil Wi-Fi :
 
 **🌞 Trouvez comment afficher les informations sur une carte IP (change selon l'OS)**
 
-![info](./interface_reseau.jpg)
+![info](./pictures/interface_reseau.jpg)
 
 **🌞 à quoi sert la gateway dans le réseau d'YNOV ?**
 La gateway sert à communiquer avec internet.
@@ -72,7 +72,7 @@ La gateway sert à communiquer avec internet.
 ### A. Modification d'adresse IP (part 1)
 
 **🌞 Utilisez l'interface graphique de votre OS pour changer d'adresse IP :**
-![ip](./new_ip.jpg)
+![ip](./pictures/new_ip.jpg)
 
 **🌞 Expliquez pourquoi c'est possible de perdre son accès internet en faisant cette opération.**
 
@@ -172,8 +172,8 @@ C:\WINDOWS\system32>netstat -a -b -n | findstr 8888
 ## 6. Firewall
 
 **🌞 Activez votre firewall**
-  ![ping](./firewall.PNG)
-  ![Exemple](./firewall_ping.PNG)
+  ![ping](./pictures/firewall.PNG)
+  ![Exemple](./pictures/firewall_ping.PNG)
 
 
 # III. Manipulations d'autres outils/protocoles côté client
@@ -266,8 +266,12 @@ L'adresse IP 78.74.21.21 appartient à Telia Company AB alors que l'adresse IP 9
 **🌞 utilisez le pour observer les trames qui circulent entre vos deux carte Ethernet. Mettez en évidence :**
 
   - un `ping` entre vous et la passerelle
-![ping](./ping.PNG)
+![ping](./pictures/ping.PNG)
   - un `netcat` entre vous et votre mate, branché en RJ45
-![netcat](./netcat.PNG)
+![netcat](./pictures/netcat.PNG)
   - une requête DNS. Identifiez dans la capture le serveur DNS à qui vous posez la question.
-![DNS](./DNS.PNG)
+![DNS](./pictures/DNS.PNG)
+
+
+
+![END](pictures/MEME.jpg)
