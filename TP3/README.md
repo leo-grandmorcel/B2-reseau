@@ -296,28 +296,6 @@ success
 
 ## III. DHCP
 
-On reprend la config précédente, et on ajoutera à la fin de cette partie une 4ème machine pour effectuer des tests.
-
-| Machine  | `10.3.1.0/24`              | `10.3.2.0/24` |
-|----------|----------------------------|---------------|
-| `router` | `10.3.1.254`               | `10.3.2.254`  |
-| `john`   | `10.3.1.11`                | no            |
-| `bob`    | oui mais pas d'IP statique | no            |
-| `marcel` | no                         | `10.3.2.12`   |
-
-```schema
-   john               router              marcel
-  ┌─────┐             ┌─────┐             ┌─────┐
-  │     │    ┌───┐    │     │    ┌───┐    │     │
-  │     ├────┤ho1├────┤     ├────┤ho2├────┤     │
-  └─────┘    └─┬─┘    └─────┘    └───┘    └─────┘
-   john        │
-  ┌─────┐      │
-  │     │      │
-  │     ├──────┘
-  └─────┘
-```
-
 ### 1. Mise en place du serveur DHCP
 
 🌞**Sur la machine `john`, vous installerez et configurerez un serveur DHCP** (go Google "rocky linux dhcp server").
