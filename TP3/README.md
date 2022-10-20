@@ -327,7 +327,7 @@ success
     Created symlink /etc/systemd/system/multi-user.target.wants/dhcpd.service → /usr/lib/systemd/system/dhcpd.service.
     ```
 - créer une machine `bob`
-- faites lui récupérer une IP en DHCP à l'aide de votre serveurù
+- faites lui récupérer une IP en DHCP à l'aide de votre serveur
 ```
     [leo@bob ~]$ sudo cat /etc/sysconfig/network-scripts/ifcfg-enp0s8
     NAME=enp0s8
