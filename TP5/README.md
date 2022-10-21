@@ -23,6 +23,7 @@ On va utiliser GNS3 dans ce TP pour se rapprocher d'un cas réel. On va focus su
 - [V. Add a building](#v-add-a-building)
   - [1. Adressage topologie 5](#1-adressage-topologie-5)
   - [2. Setup topologie 5](#2-setup-topologie-5)
+- [6. Un unique serveur DHCP pour distribuer des IPs à tous les clients de tous les VLAN](#6-un-unique-serveur-dhcp-pour-distribuer-des-ips-à-tous-les-clients-de-tous-les-vlan)
 
 # I. Dumb switch
 
@@ -525,3 +526,20 @@ subnet 10.5.10.0 netmask 255.255.255.0 {
   84 bytes from 216.58.198.206 icmp_seq=2 ttl=114 time=30.909 ms
   84 bytes from 216.58.198.206 icmp_seq=3 ttl=114 time=23.949 ms
   ```
+
+# 6. Un unique serveur DHCP pour distribuer des IPs à tous les clients de tous les VLAN
+
+```
+R1#conf t
+R1(config)#interface fastEthernet0/0.10
+R1(config-if)#ip helper-address 10.5.10.253
+R1(config-if)#no shut
+```
+
+Désormais les clients du vlan 10 dans le réseau de gauche peuvent demander une IP
+
+```
+pc1> ip dhcp -r
+DORA IP 10.5.10.6/24 GW 10.5.10.254
+```
+
